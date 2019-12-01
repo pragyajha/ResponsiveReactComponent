@@ -9,5 +9,5 @@ export default {
 export const toStorybook = () => <App/>;
 
 toStorybook.story = {
-  name: 'Responsive Boat ListItem',
+  name: 'view',
 };
