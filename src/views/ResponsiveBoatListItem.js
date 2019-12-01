@@ -24,7 +24,16 @@ const Cell = styled.div`
     border-style: solid;
     border-color: ${(props) => props.theme.color.charcoalGreyFifty};
     margin-left:-1px;
-    margin-top:-1px;
+    border-bottom: none;
+`;
+
+const PriceContainer = styled.div`
+    padding: 18px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: ${(props) => props.theme.color.charcoalGreyFifty};
+    margin-left:-1px;
+    border-bottom: none;
 `;
 
 const ImageContainer = styled.div`
@@ -33,6 +42,7 @@ const ImageContainer = styled.div`
     border-width: 1px;
     border-style: solid;
     border-color: ${(props) => props.theme.color.charcoalGreyFifty};
+    border-bottom: none;
 `;
 
 const BoatDetailsContainer = styled.div`
@@ -45,9 +55,10 @@ const BoatDetailsContainer = styled.div`
     justify-content: space-between;
     margin-left:-1px;
     margin-top:-1px;
+    border-bottom: none;
 `;
 
-const BoatDetails = styled.div`
+const Align = styled.div`
     text-align:left;
 `;
 
@@ -61,6 +72,7 @@ const StealDealContainer = styled.div`
     border-width: 1px;
     border-style: solid;
     border-color: ${(props) => props.theme.color.charcoalGreyFifty};
+    border-bottom: none;
     margin-left:-1px;
     margin-top:-1px;
 `;
@@ -89,7 +101,7 @@ const ResponsiveBoatListItem = ({ booking, navigation }) => (
                     <ResponsiveGrid.Row>
                         <ResponsiveGrid.Col xs="8" sm="8">
                             <BoatDetailsContainer>
-                                <BoatDetails>
+                                <Align>
                                     <Flex>
                                         <Text size="xl" weight="bold" fontFamily="openSans">
                                             Jeannau Sun Odyssey 45.2
@@ -101,7 +113,7 @@ const ResponsiveBoatListItem = ({ booking, navigation }) => (
                                         </Space>
                                     </Flex>
                                     <Text size="m" color="charcoalGrey">Split, Croatia</Text>
-                                </BoatDetails>
+                                </Align>
                                 <FontAwesomeIcon icon={faHeart} color="grey" style={{ margin: "0 8px" }} />
                             </BoatDetailsContainer>
                         </ResponsiveGrid.Col>
@@ -120,20 +132,20 @@ const ResponsiveBoatListItem = ({ booking, navigation }) => (
                     <ResponsiveGrid.Row>
                         <ResponsiveGrid.Col xs="2" sm="2">
                             <Cell>
-                                <Text size="m" weight="bold">12.04m</Text>
-                                <Text size="m" color="pinkishGrey">LENGTH</Text>
+                                <Text size="s" weight="bold">12.04m</Text>
+                                <Text size="s" color="pinkishGrey">LENGTH</Text>
                             </Cell>
                         </ResponsiveGrid.Col>
                         <ResponsiveGrid.Col xs="2" sm="2">
                             <Cell>
-                                <Text size="m" weight="bold"> 4</Text>
-                                <Text size="m" color="pinkishGrey">CABINS</Text>
+                                <Text size="s" weight="bold"> 4</Text>
+                                <Text size="s" color="pinkishGrey">CABINS</Text>
                             </Cell>
                         </ResponsiveGrid.Col>
                         <ResponsiveGrid.Col xs="2" sm="2">
                             <Cell>
-                                <Text size="m" weight="bold"> 10</Text>
-                                <Text size="m" color="pinkishGrey">GUESTS</Text>
+                                <Text size="s" weight="bold"> 10</Text>
+                                <Text size="s" color="pinkishGrey">GUESTS</Text>
                             </Cell>
                         </ResponsiveGrid.Col>
                         <ResponsiveGrid.Col xs="6" sm="6">
@@ -152,10 +164,13 @@ const ResponsiveBoatListItem = ({ booking, navigation }) => (
                     <ResponsiveGrid.Row>
                         <ResponsiveGrid.Col xs="12" sm="7">
                             <Cell>
+                             <Align>
                                 <Space padding={[1]}>
                                     <Flex>
-                                        <FontAwesomeIcon icon={faCheck} /> Luxury
-                                        <FontAwesomeIcon icon={faCheck} style={{ marginLeft: "24px" }} /> Sicherengusshein
+                                        <FontAwesomeIcon icon={faCheck} /> 
+                                        <Text size="l" weight="regular">Luxury</Text>
+                                        <FontAwesomeIcon icon={faCheck} style={{ marginLeft: "24px" }} />
+                                        <Text size="l" weight="regular"> Sicherengusshein</Text>
                                     </Flex>
                                 </Space>
                                 <Space padding={[1]}>
@@ -174,19 +189,22 @@ const ResponsiveBoatListItem = ({ booking, navigation }) => (
                                         <Text size="l" weight="regular">Aircon, wifi</Text>
                                     </Flex>
                                 </Space>
+                                </Align>
                             </Cell>
                         </ResponsiveGrid.Col>
                         <ResponsiveGrid.Col xs="12" sm="5">
                             <ResponsiveGrid.Col xs="6" sm="12">
-                                <Cell>
-                                    <Flex>
-                                        <Text size="m" color="pinkishGrey">FROM</Text>
-                                        <FontAwesomeIcon icon={faEuroSign} style={{ margin: "0 8px" }} />
-                                        <Text size="xl" weight="bold">1083</Text>
-                                        <Text size="m" style={{ margin: "0 8px" }}>weekly</Text>
-                                        <FontAwesomeIcon icon={faQuestionCircle} color="grey" style={{ marginLeft: "8px" }} />
-                                    </Flex>
-                                </Cell>
+                                <PriceContainer>
+                                    <Align>
+                                        <Flex>
+                                            <Text size="m" color="pinkishGrey">FROM</Text>
+                                            <FontAwesomeIcon icon={faEuroSign} style={{ margin: "0 8px" }} />
+                                            <Text size="l" weight="bold">1083</Text>
+                                            <Text size="m" style={{ margin: "0 8px" }}>weekly</Text>
+                                            <FontAwesomeIcon icon={faQuestionCircle} color="grey" style={{ marginLeft: "8px" }} />
+                                        </Flex>
+                                    </Align>
+                                </PriceContainer>
                             </ResponsiveGrid.Col>
                             <ResponsiveGrid.Col xs="6" sm="12">
                                     <Cell>
