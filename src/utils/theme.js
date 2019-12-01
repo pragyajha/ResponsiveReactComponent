@@ -21,10 +21,12 @@ theme.fontFamily.quattrocento = 'Quattrocento';
 theme.fontFamily.openSans = 'OpenSans';
 
 theme.fontSize = {};
-theme.fontSize.xl = '36px';
-theme.fontSize.l = '24px';
+theme.fontSize.xxl = '36px';
+theme.fontSize.xl = '24px';
+theme.fontSize.l = '20px';
 theme.fontSize.m = '16px';
-theme.fontSize.s = '12px';
+theme.fontSize.s = '14px';
+theme.fontSize.xs = '12px';
 
 
 theme.fontWeight = {};

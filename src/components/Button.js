@@ -3,18 +3,15 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import theme from '../utils/theme';
 
-const StyledButton = styled(({ ...props }) => (
-  <button {...props} />
-))`
+const Button = styled(({ ...props }) => <button {...props} />)`
     position: relative;
-    width:112px;
+    width:100%;
     height:40px;
-    margin-left:40px;
     background-color:${(props) => props.theme.color.paleRed};
     text-align:center;
     line-height:20px;
     text-transform: uppercase;
-    font-size: ${(props) => props.theme.fontSize.s};
+    font-size: ${(props) => props.theme.fontSize.m};
     font-weight: ${(props) => props.theme.fontWeight.bold};
     color: ${(props) => props.theme.color.white};
   
@@ -45,14 +42,6 @@ const StyledButton = styled(({ ...props }) => (
   
 `;
 
-const Button = (props, context) => (
-  <StyledButton
-    {...props}
-    disabled={
-      props.disabled
-    }
-  />
-);
 
 Button.propTypes = {
   color: PropTypes.oneOf(Object.keys(theme.color)),
@@ -65,7 +54,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  color: 'primary',
+  color: 'paleRed',
   kind: 'filled',
   size: 'medium',
   shape: 'bluntEdged',
@@ -78,20 +67,3 @@ Button.contextTypes = {
 };
 
 export default Button;
-
-// display: inline-flex;
-//   align-items: center;
-//   justify-content: center;
-//   cursor: pointer;
-//   text-transform: uppercase;
-//   color: ${styles.color};
-//   font-size: ${styles.fontSize};
-//   background-color: ${styles.backgroundColor};
-//   padding: ${styles.padding};
-//   width: ${(props) => (props.block ? '100%' : '')};
-//   border-width: 1px;
-//   border-style: solid;
-//   border-color: ${styles.borderColor};
-//   border-radius: ${styles.borderRadius};
-//   pointer-events: ${styles.pointerEvents};
-//   opacity: ${styles.opacity};
