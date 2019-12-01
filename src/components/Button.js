@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import theme from '../utils/theme';
 
-const Button = styled(({ ...props }) => <button {...props} />)`
+const Button = styled(({ ...props }) => <button {...props} />) `
     position: relative;
     width:100%;
     height:40px;

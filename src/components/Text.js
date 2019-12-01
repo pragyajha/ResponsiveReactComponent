@@ -6,7 +6,7 @@ import theme from '../utils/theme';
 const Text = styled(
   ({ component, color, size, weight, family, align, truncate, children, ...props }) =>
     React.createElement(component, props, children)
-)`
+) `
   color: ${(props) => (props.color ? props.theme.color[props.color] : '')};
   font-size: ${(props) => (props.size ? props.theme.fontSize[props.size] : '')};
   font-weight: ${(props) => (props.weight ? props.theme.fontWeight[props.weight] : '')};

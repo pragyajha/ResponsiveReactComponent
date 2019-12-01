@@ -6,9 +6,9 @@ import theme from '../src/utils/theme';
 
 function App() {
   return (
-      <ThemeProvider theme={theme}>
-        <ResponsiveBoatListItem />
-      </ThemeProvider>
+    <ThemeProvider theme={theme}>
+      <ResponsiveBoatListItem />
+    </ThemeProvider>
   );
 }
 

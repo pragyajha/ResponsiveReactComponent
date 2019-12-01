@@ -17,7 +17,7 @@ ResponsiveGrid.Row = styled.div`
     }
 `;
 
-ResponsiveGrid.Col =  styled.div`
+ResponsiveGrid.Col = styled.div`
     float:left;
     box-sizing: border-box;
     text-align: center;
